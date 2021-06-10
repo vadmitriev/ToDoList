@@ -13,6 +13,7 @@
 
 ## Установка
 
+Через консоль:
 ```console
 git clone https://github.com/vadmitriev/ToDoList.git
 ```
@@ -24,4 +25,12 @@ npm install
 ```
 ```console
 npm start
+```
+
+С использованием Docker-контейнера:
+```console
+docker build -t todolist .
+```
+``` console
+docker run todolist
 ```
