@@ -13,7 +13,15 @@
 
 ## Установка
 
-* `git clone https://github.com/vadmitriev/technical-test.git`
-* `cd technical-test`
-* `npm install`
-* `npm start`
+```console
+git clone https://github.com/vadmitriev/ToDoList.git
+```
+``` console
+cd todolist
+```
+``` console
+npm install
+```
+```console
+npm start
+```
