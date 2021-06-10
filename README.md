@@ -12,17 +12,17 @@
 Посмотреть можно по ссылке: <a href="https://todolist-vadmitriev.web.app/">todolist-vadmitriev.web.app</a>
 
 ## Установка
-
-Через консоль:
 ```console
 git clone https://github.com/vadmitriev/ToDoList.git
 ```
 ``` console
 cd todolist
 ```
+
 ``` console
 npm install
 ```
+С использованием Nodejs локально:
 ```console
 npm run start
 ```
