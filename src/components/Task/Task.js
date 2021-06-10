@@ -1,4 +1,5 @@
 import {Button, Checkbox, Tooltip} from 'antd'
+import {DeleteOutlined} from '@ant-design/icons'
 import List from 'antd/es/list'
 import styled from 'styled-components'
 
@@ -31,24 +32,30 @@ const TaskBox = styled.div`
 	}
 `
 
-export const Tasks = ({value: {value, isDone}, id, onChange, onDelete}) => {
-    console.log("value:", value)
+export const Task = ({taskItem, onChange, onDelete}) => {
     return (
-        <List css={{marginBottom: 15}}>
-            <TaskBox done={isDone}>
-                <Checkbox checked={isDone} onChange={e => onChange({id, isDone: e.target.checked})} >
-                    {value}
+        <List style={{marginBottom: 10}}>
+            <TaskBox done={taskItem.isDone}>
+                <Checkbox
+                    checked={taskItem.isDone}
+                    onChange={e => {
+                        onChange({
+                            id: taskItem.id,
+                            isDone: e.target.checked})
+                    }}
+                >
+                    {taskItem.value}
                 </Checkbox>
-                <Tooltip placement="topLeft" title="Удалить">
+                <Tooltip placement="topLeft" title="Удалить" >
                     <Button
-                        type="danger"
                         shape="circle"
-                        icon="delete"
-                        css={{
+                        icon= {<DeleteOutlined />}
+                        style={{
                             float: "right",
-                            marginTop: 0
+                            marginTop: -5,
+                            color: "#FF0000"
                         }}
-                        onCLick={() => onDelete(id)}
+                        onClick={() => onDelete(taskItem.id)}
                     />
                 </Tooltip>
             </TaskBox>
