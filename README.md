@@ -24,7 +24,7 @@ cd todolist
 npm install
 ```
 ```console
-npm start
+npm run start
 ```
 
 С использованием Docker-контейнера:
