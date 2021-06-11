@@ -32,5 +32,5 @@ npm run start
 docker build -t todolist .
 ```
 ``` console
-docker run todolist
+docker run --publish 3000:3000 todolist
 ```
