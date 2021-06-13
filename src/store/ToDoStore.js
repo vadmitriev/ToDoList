@@ -16,7 +16,7 @@ export class ToDoStore {
     tasks = []
     filteredTasks = []
 
-    constructor(props) {
+    constructor() {
         makeAutoObservable(this)
     }
 
@@ -95,6 +95,12 @@ export class ToDoStore {
                 default:
                     return true
             }
+        })
+    }
+
+    filterByText(text) {
+        this.filteredTasks = this.tasks.filter(task => {
+            return task.value.startsWith(text)
         })
     }
 
