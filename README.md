@@ -19,10 +19,10 @@ git clone https://github.com/vadmitriev/ToDoList.git
 cd todolist
 ```
 
+С использованием Nodejs локально:
 ``` console
 npm install
 ```
-С использованием Nodejs локально:
 ```console
 npm run start
 ```
